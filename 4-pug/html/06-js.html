@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Javascript</title>
+  </head>
+  <body>
+    <h1>Javascript</h1>
+    <h3 id="mensaje"></h3>
+    <script>
+      var ms = document.getElementById('mensaje');
+      var nm = prompt('Cuál es su Nombre ?');
+      var fa = new Date();
+      
+      ms.innerHTML  = "Bienvenido: "+nm;
+      ms.innerHTML += " - Hora de Ingreso: "+fa.getHours()+":"+fa.getMinutes();
+    </script>
+  </body>
+</html>
