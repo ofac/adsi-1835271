@@ -1,0 +1,17 @@
+doctype
+html(lang="es")
+	head
+		meta(charset="UTF-8")
+		title Reutilizable (mixin)
+	body
+		h1 Reutilizable (mixin)
+		mixin serie(name, caps)
+			li= name+' ('+caps+')'
+
+		+serie('Shingeki no kyogin', 60)
+		+serie('Kimetsu no yaiba', 16)
+		+serie('One Punch Man', 24)
+		+serie('Vinland Saga', 3)
+
+
+	
