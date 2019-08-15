@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Posicionamiento (Normal/Estático)</title>
+	<style>
+		main {
+			margin: 0px auto;
+			width: 960px;
+		}
+		main section {
+			border: 1px solid #555;
+			display: inline-block;
+			padding: 10px;
+			vertical-align: top;
+			width: 448px;
+		}
+		main section.block {
+
+		}
+		main section.inline {
+			margin-left: 16px;
+		}
+		main section.block div {
+			border: 1px solid #555;
+			padding: 20px;
+			margin: 5px 0px;
+		}
+		main section.inline div {
+			border: 1px dashed #999;
+			padding: 20px 0px;
+			margin: 5px 0px;
+		}
+		main section.inline div a {
+			border: 1px solid #555;
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Posicionamiento (Normal/Estático)</h1>
+	<main>
+		<section class="block">
+			<h4>Elementos Bloque</h4>
+			<div>Elemento de Bloque</div>
+			<div>Elemento de Bloque</div>
+			<div>Elemento de Bloque</div>
+		</section>
+		<section class="inline">
+			<h4>Elementos Línea</h4>
+			<div>
+				<a href="">Google</a>
+				<a href="">Yahoo</a>
+			</div>
+			<div></div>
+		</section>
+	</main>
+</body>
+</html>
