@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Contenido Sobrante (overflow)</title>
+	<style>
+		section.overflow {
+			margin: 10px auto;
+			width: 500px;
+		}
+		section.overflow div {
+			border: 1px solid #999;
+			display: inline-block;
+			height: 250px;
+			padding: 10px;
+			vertical-align: top;
+			width: 140px;
+		}
+		section.overflow div h3 {
+			background-color: #ccc;
+			margin: 0px;
+			padding: 10px;
+		}
+		section.overflow div.box1 { overflow: visible; } 
+		section.overflow div.box2 { overflow: hidden;  } 
+		section.overflow div.box3 { overflow: scroll;  } 
+
+	</style>
+</head>
+<body>
+	<main>
+		<h1>Contenido Sobrante (overflow)</h1>
+		<section class="overflow">
+			<div class="box1">
+				<h3>overflow:visible</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam magnam quisquam expedita, ea consequuntur, nisi aspernatur ullam sint a atque ab libero alias vel velit temporibus. Asperiores facere commodi veritatis, atque cumque dolores provident ex sint exercitationem, error ullam iusto, quasi. Natus ducimus corporis libero necessitatibus voluptatem porro, fugiat placeat?</p>
+			</div>
+			<div class="box2">
+				<h3>overflow:visible</h3>
+				<p>Ipsum sequi, reiciendis ab explicabo, consequuntur debitis neque error cumque alias minima necessitatibus tenetur repellendus repellat voluptatem voluptatibus minus impedit illum corporis, natus quae maiores. Maiores dolores ad deserunt a odit reprehenderit doloribus earum excepturi soluta blanditiis omnis, magnam facilis eum enim optio obcaecati veniam consequatur alias. Illum, dolores architecto.</p>
+			</div>
+			<div class="box3">
+				<h3>overflow:visible</h3>
+				<p>Eveniet asperiores mollitia beatae dolorum ipsam voluptas omnis, vel non quia eligendi hic, maxime, alias inventore a eius. Non consequuntur nihil aperiam veniam. Dicta harum aliquam eum reiciendis voluptatem sint voluptates dolores doloribus odio est quam consectetur, quasi nostrum, officiis omnis error enim dignissimos rem ipsum. Aut incidunt amet aliquid.</p>
+			</div>
+		</section>
+	</main>
+</body>
+</html>
