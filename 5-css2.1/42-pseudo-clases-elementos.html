@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Pseudo (Clases/Elemento)</title>
+	<style>
+		body {
+			font: 16px Arial;
+		}
+		nav.links {
+			margin: 10px auto;
+			width: 600px;
+		}
+		nav.links a {
+			display: inline-block;
+			width: 125px;
+		}
+		nav.links a:link:first-child {
+			color: #ffd03f;
+		}
+		nav.links a:link,
+		nav.links a:visited {
+			background-color: #00a687;
+			border-bottom: 10px solid #0b5244;
+			color: #0b5244;
+			padding: 10px;
+			text-align: center;
+			text-decoration: none;
+		}
+		nav.links a:hover {
+			background-color: #0b5244;
+			border-bottom: 10px solid #00a687;
+			color: #00a687;
+		}
+		nav.links a:active {
+			background-color: #ad3C39;
+			border-bottom: 10px solid #642424;
+			color: #642424;
+		}
+		input.input {
+			border: 1px solid #00a687;
+			outline: none;
+			padding: 10px;
+		}
+		input.input:focus {
+			background-color: #c5ffe6;
+			border: 1px dotted #0b5244;
+		}
+		p {
+			margin: 10px auto;
+			padding: 10px;
+			width: 600px;
+		}
+		p:first-letter {
+			color: #a51e7b;
+			font-size: 5em;
+		}
+		p:first-line {
+			background-color: #c5ffe6;
+			text-decoration: line-through;
+		}
+		div.box {
+			background-color: #5bcaff;
+			height: 200px;
+			width: 200px;
+		}
+		div.box:before {
+			background-color: #ff8c2b;
+			content: "";
+			height: 200px;
+			position: absolute;
+			left: 20px;
+			width: 200px;
+		}
+		div.box:after {
+			background-color: #00d15e;
+			content: "👽";
+			height: 200px;
+			position: absolute;
+			left: 30px;
+			width: 200px;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<h1>Pseudo (Clases/Elemento)</h1>
+		<h4>Enlaces (link,visited,active,hover) (first-child)</h4>
+		<nav class="links">
+			<a href="javascript:;">Home</a>
+			<a href="javascript:;">About Us</a>
+			<a href="javascript:;">Services</a>
+			<a href="javascript:;">Contact Us</a>
+		</nav>
+		<h4>Elemento de Entrada Formulario (focus)</h4>
+		<input type="text" class="input" placeholder="Correo Electrónico">
+		<h4>Primera Letra/Línea</h4>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur numquam provident cum omnis sit molestias est blanditiis corrupti dolorum consequatur laboriosam temporibus aliquid, hic ipsum quam voluptatum? Voluptatem, incidunt temporibus.
+		</p>
+		<h4>Antes/Después</h4>
+		<div class="box"></div>
+	</main>
+</body>
+</html>
