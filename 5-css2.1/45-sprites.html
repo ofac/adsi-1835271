@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Sprites (Imágenes)</title>
+	<style>
+		section#sprite {
+			background: url(imgs/sprite.png) no-repeat;
+			height: 120px;
+			margin: 40px auto;
+			width: 80px;
+		}
+		section#sprite.sp1 { background-position: 0px    0px; }
+		section#sprite.sp2 { background-position: -94px  0px; }
+		section#sprite.sp3 { background-position: -190px 0px; }
+
+		section#sprite.sp4 { background-position: 0px    -128px; }
+		section#sprite.sp5 { background-position: -94px  -128px; }
+		section#sprite.sp6 { background-position: -190px -128px; }
+
+		section#sprite.sp7 { background-position: 0px    -250px; }
+		section#sprite.sp8 { background-position: -94px  -250px; }
+		section#sprite.sp9 { background-position: -190px -250px; }
+
+		section#sprite.sp10 { background-position: 0px    -384px; }
+		section#sprite.sp11 { background-position: -94px  -384px; }
+		section#sprite.sp12 { background-position: -190px -384px; }
+
+	</style>
+</head>
+<body>
+	<main>
+		<h1>Sprites (Imágenes)</h1>
+		<section id="sprite"></section>
+	</main>
+	<script>
+		var sp = document.getElementById('sprite');
+		var ct = 1;
+		var ns = 12;
+		var si = setInterval(function() {
+			sp.className = '';
+			sp.classList.add('sp'+ct);
+			if(ct == ns) {
+				ct = 1;
+			} else {
+				ct++;
+			}
+		},120);
+	</script>
+</body>
+</html>
