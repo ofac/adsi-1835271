@@ -15,6 +15,36 @@
 			background-color: #7ab862;
 			color: #3e5e35;
 		}
+		/* li:nth-child(3) */
+		ul.databases li:nth-child(3) {
+			background-color: #7ab862;
+			color: #3e5e35;
+		}
+		/* article#home:target */
+		nav a:link,
+		nav a:visited {
+			color: #1d4e6f;
+		}
+		article {
+			display: none;
+		}
+		article#home:target,
+		article#services:target,
+		article#contact:target {
+			background-color: #7ab862;
+			color: #3e5e35;
+			display: block;
+		}
+		/* ::selection */
+		p.yellow::selection {
+			background-color: yellow;
+		}
+		p.blue::selection {
+			background-color: blue;
+		}
+		p.red::selection {
+			background-color: red;
+		}
 	</style>
 </head>
 <body>
@@ -35,6 +65,42 @@
 				<li>CSS</li>
 				<li>JS</li>
 			</ul>
+			<h3>li:nth-child(n) (Selecciona el elemento número n)</h3>
+			<ul class="databases">
+				<li>MySQL</li>
+				<li>Maria DB</li>
+				<li>Postgres</li>
+				<li>SQL Server</li>
+				<li>Oracle</li>
+			</ul>
+			<h3>article#home:target (Selecciona el ancla activa)</h3>
+			<nav>
+				<a href="#home">Home</a> |
+				<a href="#services">Services</a> |
+				<a href="#contact">Contact</a> 
+			</nav>
+			<article id="home">
+				<h4>Home</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis et, sunt asperiores iure ipsam sit, quis quae quia culpa dolor excepturi saepe voluptatibus aspernatur distinctio iste aliquid est ducimus obcaecati.</p>
+			</article>
+			<article id="services">
+				<h4>Service</h4>
+				<p>Quam laboriosam dolore non facere repellat quaerat pariatur repellendus. Deserunt tempore magni, eius officiis minima, dolores similique enim, sed nobis natus ullam necessitatibus dignissimos esse, cum fugiat provident rerum assumenda!</p>
+			</article>
+			<article id="contact">
+				<h4>Contact</h4>
+				<p>In eligendi quibusdam aperiam sint commodi quam voluptatem repellendus voluptatum, optio quasi modi quo pariatur, dolorem beatae praesentium veniam laudantium distinctio asperiores, nulla accusantium eveniet nobis et. Ab optio, accusantium!</p>
+			</article>
+			<h3>::selection (Seleccion del usuario)</h3>
+			<p class="yellow">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis quas a modi illum perspiciatis nemo error tenetur incidunt et! Sit eligendi excepturi impedit ducimus hic quo corrupti nesciunt totam voluptate.
+			</p>
+			<p class="blue">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus repellat itaque possimus temporibus, ipsam sequi error dolor ipsa sit ullam, magni esse blanditiis? Veritatis modi non aperiam, minus. Soluta, voluptas.
+			</p>
+			<p class="red">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non tenetur, dolor suscipit ex ullam doloribus adipisci debitis placeat nemo nostrum, enim saepe beatae, voluptatibus sint culpa harum, corrupti blanditiis! Iusto!
+			</p>
 		</section>
 	</main>
 </body>

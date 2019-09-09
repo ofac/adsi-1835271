@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Reto (Sombras)</title>
+	<link rel="stylesheet" href="css/master.css">
+	<style>
+		section {
+			height: 320px;
+			margin: 20px auto;
+			width: 300px;
+		}
+		div.squares {
+			background: url(imgs/square-w.png);
+			height: 320px;
+			opacity: 0.4;
+			margin-top: -20px;
+			z-index: 2;
+		}
+		div.yoda {
+			height: 20px;
+			width: 20px;
+			/* - - - */
+			box-shadow: 20px  0px 0px 0px #fff,
+						40px  0px 0px 0px #fff,
+						60px  0px 0px 0px #fff,
+						80px  0px 0px 0px #fff,
+						100px 0px 0px 0px #fff,
+						120px 0px 0px 0px #000,
+						140px 0px 0px 0px #000,
+						160px 0px 0px 0px #000,
+						180px 0px 0px 0px #000,
+						200px 0px 0px 0px #fff,
+						220px 0px 0px 0px #fff,
+						240px 0px 0px 0px #fff,
+						260px 0px 0px 0px #fff,
+						280px 0px 0px 0px #fff,
+
+						20px  20px 0px 0px #000,
+						40px  20px 0px 0px #000,
+						60px  20px 0px 0px #000,
+						80px  20px 0px 0px #fff,
+						100px 20px 0px 0px #000,
+						120px 20px 0px 0px #090,
+						140px 20px 0px 0px #090,
+						160px 20px 0px 0px #090,
+						180px 20px 0px 0px #090,
+						200px 20px 0px 0px #000,
+						220px 20px 0px 0px #fff,
+						240px 20px 0px 0px #000,
+						260px 20px 0px 0px #000,
+						280px 20px 0px 0px #000,
+
+						20px  40px 0px 0px #000,
+						40px  40px 0px 0px #090,
+						60px  40px 0px 0px #090,
+						80px  40px 0px 0px #000,
+						100px 40px 0px 0px #090,
+						120px 40px 0px 0px #090,
+						140px 40px 0px 0px #090,
+						160px 40px 0px 0px #090,
+						180px 40px 0px 0px #090,
+						200px 40px 0px 0px #090,
+						220px 40px 0px 0px #000,
+						240px 40px 0px 0px #090,
+						260px 40px 0px 0px #090,
+						280px 40px 0px 0px #000,
+
+						20px  60px 0px 0px #fff,
+						40px  60px 0px 0px #000,
+						60px  60px 0px 0px #090,
+						80px  60px 0px 0px #090,
+						100px 60px 0px 0px #090,
+						120px 60px 0px 0px #090,
+						140px 60px 0px 0px #090,
+						160px 60px 0px 0px #090,
+						180px 60px 0px 0px #090,
+						200px 60px 0px 0px #090,
+						220px 60px 0px 0px #090,
+						240px 60px 0px 0px #090,
+						260px 60px 0px 0px #000,
+						280px 60px 0px 0px #fff,
+
+						20px  80px 0px 0px #fff,
+						40px  80px 0px 0px #fff,
+						60px  80px 0px 0px #000,
+						80px  80px 0px 0px #000,
+						100px 80px 0px 0px #090,
+						120px 80px 0px 0px #090,
+						140px 80px 0px 0px #090,
+						160px 80px 0px 0px #090,
+						180px 80px 0px 0px #090,
+						200px 80px 0px 0px #090,
+						220px 80px 0px 0px #000,
+						240px 80px 0px 0px #000,
+						260px 80px 0px 0px #fff,
+						280px 80px 0px 0px #fff,
+
+						20px  100px 0px 0px #fff,
+						40px  100px 0px 0px #fff,
+						60px  100px 0px 0px #fff,
+						80px  100px 0px 0px #000,
+						100px 100px 0px 0px #090,
+						120px 100px 0px 0px #000,
+						140px 100px 0px 0px #090,
+						160px 100px 0px 0px #090,
+						180px 100px 0px 0px #000,
+						200px 100px 0px 0px #090,
+						220px 100px 0px 0px #000,
+						240px 100px 0px 0px #fff,
+						260px 100px 0px 0px #fff,
+						280px 100px 0px 0px #fff,
+
+						20px  120px 0px 0px #fff,
+						40px  120px 0px 0px #fff,
+						60px  120px 0px 0px #000,
+						80px  120px 0px 0px #000,
+						100px 120px 0px 0px #090,
+						120px 120px 0px 0px #000,
+						140px 120px 0px 0px #090,
+						160px 120px 0px 0px #090,
+						180px 120px 0px 0px #000,
+						200px 120px 0px 0px #090,
+						220px 120px 0px 0px #000,
+						240px 120px 0px 0px #000,
+						260px 120px 0px 0px #fff,
+						280px 120px 0px 0px #fff,
+
+						20px  140px 0px 0px #fff,
+						40px  140px 0px 0px #000,
+						60px  140px 0px 0px #d9bb7b,
+						80px  140px 0px 0px #d9bb7b,
+						100px 140px 0px 0px #000,
+						120px 140px 0px 0px #090,
+						140px 140px 0px 0px #090,
+						160px 140px 0px 0px #090,
+						180px 140px 0px 0px #090,
+						200px 140px 0px 0px #000,
+						220px 140px 0px 0px #d9bb7b,
+						240px 140px 0px 0px #d9bb7b,
+						260px 140px 0px 0px #000,
+						280px 140px 0px 0px #fff,
+
+						20px  160px 0px 0px #000,
+						40px  160px 0px 0px #d9bb7b,
+						60px  160px 0px 0px #d9bb7b,
+						80px  160px 0px 0px #d9bb7b,
+						100px 160px 0px 0px #d9bb7b,
+						120px 160px 0px 0px #000,
+						140px 160px 0px 0px #000,
+						160px 160px 0px 0px #000,
+						180px 160px 0px 0px #000,
+						200px 160px 0px 0px #d9bb7b,
+						220px 160px 0px 0px #d9bb7b,
+						240px 160px 0px 0px #d9bb7b,
+						260px 160px 0px 0px #d9bb7b,
+						280px 160px 0px 0px #000,
+
+						20px  180px 0px 0px #000,
+						40px  180px 0px 0px #d9bb7b,
+						60px  180px 0px 0px #d9bb7b,
+						80px  180px 0px 0px #d9bb7b,
+						100px 180px 0px 0px #000,
+						120px 180px 0px 0px #630,
+						140px 180px 0px 0px #630,
+						160px 180px 0px 0px #630,
+						180px 180px 0px 0px #630,
+						200px 180px 0px 0px #000,
+						220px 180px 0px 0px #d9bb7b,
+						240px 180px 0px 0px #d9bb7b,
+						260px 180px 0px 0px #d9bb7b,
+						280px 180px 0px 0px #000,
+
+						0px   200px 0px 0px #630,
+						20px  200px 0px 0px #000,
+						40px  200px 0px 0px #090,
+						60px  200px 0px 0px #090,
+						80px  200px 0px 0px #000,
+						100px 200px 0px 0px #630,
+						120px 200px 0px 0px #630,
+						140px 200px 0px 0px #630,
+						160px 200px 0px 0px #630,
+						180px 200px 0px 0px #630,
+						200px 200px 0px 0px #630,
+						220px 200px 0px 0px #000,
+						240px 200px 0px 0px #090,
+						260px 200px 0px 0px #090,
+						280px 200px 0px 0px #000,
+
+						20px  220px 0px 0px #630,
+						40px  220px 0px 0px #000,
+						60px  220px 0px 0px #000,
+						80px  220px 0px 0px #000,
+						100px 220px 0px 0px #630,
+						120px 220px 0px 0px #630,
+						140px 220px 0px 0px #630,
+						160px 220px 0px 0px #630,
+						180px 220px 0px 0px #630,
+						200px 220px 0px 0px #630,
+						220px 220px 0px 0px #000,
+						240px 220px 0px 0px #000,
+						260px 220px 0px 0px #000,
+						280px 220px 0px 0px #fff,
+
+						20px  240px 0px 0px #630,
+						40px  240px 0px 0px #000,
+						60px  240px 0px 0px #d9bb7b,
+						80px  240px 0px 0px #000,
+						100px 240px 0px 0px #630,
+						120px 240px 0px 0px #630,
+						140px 240px 0px 0px #630,
+						160px 240px 0px 0px #630,
+						180px 240px 0px 0px #630,
+						200px 240px 0px 0px #630,
+						220px 240px 0px 0px #000,
+						240px 240px 0px 0px #d9bb7b,
+						260px 240px 0px 0px #000,
+						280px 240px 0px 0px #fff,
+
+						20px  260px 0px 0px #630,
+						40px  260px 0px 0px #000,
+						60px  260px 0px 0px #d9bb7b,
+						80px  260px 0px 0px #000,
+						100px 260px 0px 0px #630,
+						120px 260px 0px 0px #630,
+						140px 260px 0px 0px #630,
+						160px 260px 0px 0px #630,
+						180px 260px 0px 0px #630,
+						200px 260px 0px 0px #630,
+						220px 260px 0px 0px #000,
+						240px 260px 0px 0px #d9bb7b,
+						260px 260px 0px 0px #000,
+						280px 260px 0px 0px #fff,
+
+						20px  280px 0px 0px #630,
+						40px  280px 0px 0px #000,
+						60px  280px 0px 0px #d9bb7b,
+						80px  280px 0px 0px #000,
+						100px 280px 0px 0px #090,
+						120px 280px 0px 0px #090,
+						140px 280px 0px 0px #090,
+						160px 280px 0px 0px #000,
+						180px 280px 0px 0px #090,
+						200px 280px 0px 0px #090,
+						220px 280px 0px 0px #000,
+						240px 280px 0px 0px #d9bb7b,
+						260px 280px 0px 0px #000,
+						280px 280px 0px 0px #fff,
+
+						20px  300px 0px 0px #630,
+						40px  300px 0px 0px #fff,
+						60px  300px 0px 0px #000,
+						80px  300px 0px 0px #fff,
+						100px 300px 0px 0px #000,
+						120px 300px 0px 0px #000,
+						140px 300px 0px 0px #000,
+						160px 300px 0px 0px #fff,
+						180px 300px 0px 0px #000,
+						200px 300px 0px 0px #000,
+						220px 300px 0px 0px #fff,
+						240px 300px 0px 0px #000,
+						260px 300px 0px 0px #fff,
+						280px 300px 0px 0px #fff;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<header>
+			<h1>Reto (Sombras)</h1>
+		</header>
+		<section>
+			<div class="yoda"></div>
+			<div class="squares"></div>
+		</section>
+	</main>
+</body>
+</html>
