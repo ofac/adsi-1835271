@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Transformaciones</title>
+	<link rel="stylesheet" href="css/master.css">
+	<style>
+		div.box {
+			background: url(imgs/zenitsu.jpg) no-repeat center;
+			background-size: contain;
+			height: 280px;
+			margin: 20px auto;
+			width: 180px;
+		}
+		div.box1 { transform: translate(-200px); }
+		div.box2 { transform: rotate(90deg); }
+		div.box3 { transform: scale(0.5); }
+		div.box4 { transform: skew(30deg); }
+		div.box5 { 
+			transform: rotate(45deg) scale(0.8); 
+		}
+
+	</style>
+</head>
+<body>
+	<main>
+		<header>
+			<h1>Transformaciones</h1>
+		</header>
+		<section>
+			<h3>translate(-200px)</h3>
+			<div class="box box1"></div>
+			<h3>rotate(90deg)</h3>
+			<div class="box box2"></div>
+			<h3>scale(0.5)</h3>
+			<div class="box box3"></div>
+			<h3>skew(30deg)</h3>
+			<div class="box box4"></div>
+			<h3>rotate(45deg) scale(0.8)</h3>
+			<div class="box box5"></div>
+		</section>
+	</main>
+</body>
+</html>

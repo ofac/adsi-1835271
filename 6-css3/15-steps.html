@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Animación (Steps)</title>
+	<link rel="stylesheet" href="css/master.css">
+	<style>
+		div.steps1,
+		div.steps2 {
+			margin: 20px auto;
+			position: relative;
+		}
+		div.steps1 {
+			background: url(imgs/steps.png) no-repeat center left;
+			height: 509px;
+			width: 200px;
+			animation: animSteps1 0.5s steps(10) infinite;
+		}
+		div.steps2 {
+			background: url(imgs/steps2.png) no-repeat center left;
+			height: 240px;
+			width: 190px;
+			animation: animSteps2 1s steps(10) infinite;
+		}
+		@keyframes animSteps1 {
+			100% {
+				background-position: -2000px;
+			}
+		}
+		@keyframes animSteps2 {
+			100% {
+				background-position: -1900px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<header>
+			<h1>Animación (Steps)</h1>
+		</header>
+		<section>
+			<div class="steps1"></div>
+			<div class="steps2"></div>
+		</section>
+	</main>
+</body>
+</html>

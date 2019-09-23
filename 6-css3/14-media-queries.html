@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Media Queries</title>
+	<style>
+		* {
+			transition: all 0.5s ease-in;
+		}
+		body {
+			background-color: #013571;
+			color: rgba(255,255,255,0.6);
+			font: 16px Verdana;
+		}
+		main {
+			border: 10px solid rgba(255,255,255,0.2);
+			margin: 20px auto;
+			padding: 20px;
+			width: 950px;
+		}
+		main figure.logo {
+			background: url(imgs/pepsi01.png) no-repeat center;
+			height: 354px;
+			margin: 0px auto;
+			width: 919px;
+		}
+		main h1 {
+			text-align: center;
+		}
+		main h1 small.bp2,
+		main h1 small.bp3 {
+			display: none;
+		}
+		main p {
+			line-height: 1.8em;
+			text-align: justify;
+		}
+		@media (max-width: 1024px) {
+			main {
+				width: 720px;
+			}
+			main figure.logo {
+				background: url(imgs/pepsi02.png) no-repeat center;
+				height: 370px;
+				width: 348px;
+			}
+			main h1 small.bp1,
+			main h1 small.bp3 {
+				display: none;
+			}
+			main h1 small.bp2 {
+				display: inline;
+			}
+		}
+		@media (max-width: 780px) {
+			main {
+				width: 380px;
+			}
+			main figure.logo {
+				background: url(imgs/pepsi03.png) no-repeat center;
+				height: 156px;
+				width: 162px;
+			}
+			main h1 small.bp1,
+			main h1 small.bp2 {
+				display: none;
+			}
+			main h1 small.bp3 {
+				display: inline;
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<main>
+		<figure class="logo"></figure>
+		<h1> 
+			Media Queries 
+			<small class="bp1"> ( Desktop: 1024px ) </small> 
+			<small class="bp2"> ( Tablet: 780px )   </small> 
+			<small class="bp3"> ( Mobile: 440px )   </small> 
+		</h1>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores perspiciatis sed repellendus exercitationem dolor quam, voluptatem pariatur eveniet ex culpa vitae ipsa recusandae deleniti sapiente tempore perferendis harum! Dolorum culpa sit error vel repellat? Sed, voluptatibus quo cumque error? Eveniet esse fugit consequuntur, exercitationem obcaecati natus officiis vitae vel ratione labore iste, rem dicta deserunt inventore necessitatibus consectetur ut reprehenderit ipsum quod perspiciatis in laborum magni facilis quae repellendus. Aut odit voluptatibus sunt, ratione facere vel facilis. Soluta, cum est hic aperiam deleniti. Quas aliquid, error ab dolore illum sapiente molestiae. Officiis voluptate tempore odit, beatae sapiente, omnis neque, quaerat voluptatum pariatur, labore consequuntur voluptatem voluptatibus et molestiae. Ad fuga corporis expedita, inventore! Delectus sed quas repellat odio error quae nulla, architecto adipisci ad minus! Nihil, facilis sequi quaerat placeat, alias excepturi odit necessitatibus consequatur aspernatur tenetur asperiores ex impedit magnam aut ducimus quis soluta reiciendis, possimus ratione. Illum optio nesciunt consectetur temporibus officiis eaque unde, omnis fugit, explicabo delectus eveniet consequatur excepturi corporis laudantium reprehenderit sint doloribus ex mollitia officia ab. Id voluptates quibusdam ex, dolorum iste maiores. Expedita quae doloremque officiis necessitatibus incidunt, tempore, corporis temporibus aspernatur? Optio adipisci qui id hic, mollitia harum repudiandae quasi quidem placeat.
+		</p>
+	</main>
+</body>
+</html>
