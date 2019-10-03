@@ -1,6 +1,6 @@
 body h1 {
-  font-size: 3.6em;
-  background: linear-gradient(to top, #003145 30%, #54F400);
+  font-size: 3em;
+  background: linear-gradient(to top, #333 30%, #d94d9b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin: 40px auto;
@@ -9,9 +9,9 @@ body h1 {
 }
 body a:link.btn,
 body a:visited.btn {
-  border: 1px solid #54F400;
+  border: 1px solid #d94d9b;
   border-radius: 4px;
-  color: #54F400;
+  color: #d94d9b;
   display: block;
   padding: 12px;
   text-align: center;
@@ -56,19 +56,20 @@ div.modal > div {
   transform: translateX(-50%);
   width: 400px;
 }
-div.modal > div h2 {
-  color: #d71f33;
+div.modal > div h2.message {
+  color: #439d27;
+  border-bottom: 2px solid #439d27;
   position: relative;
 }
-div.modal > div h2:after {
-  content: "No Pueve Votar";
+div.modal > div h2.message:after {
+  content: "Si Pueve Votar";
 }
 div.modal > div a:link,
 div.modal > div a:visited {
   font-size: 2em;
   display: block;
   text-decoration: none;
-  color: #dc143c;
+  color: #742d56;
   position: absolute;
   top: 0px;
   right: 10px;
