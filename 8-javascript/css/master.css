@@ -1,0 +1,21 @@
+body {
+	background-color: #dfd928;
+	font: 16px Arial;
+}
+main {
+	margin: 20px auto;
+	width: 1024px;
+}
+main header h1 {
+	color: rgba(255,255,255,.8);
+	background-color: rgba(0,0,0,.6);
+	padding: 10px;
+	margin-bottom: 0px;
+	text-align: center;
+}
+
+main section {
+	color: rgba(0,0,0,.8);
+	background-color: rgba(0,0,0,.2);
+	padding: 10px;
+}

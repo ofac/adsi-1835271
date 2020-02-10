@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Como escribir JS</title>
+	<link rel="stylesheet" href="css/master.css">
+</head>
+<body>
+	<main>
+		<header>
+			<h1>Como escribir JS</h1>
+		</header>
+		<section>
+			<script>
+				document.write("Hola mundo ADSI");
+			</script>
+			<h2 id="msj"></h2>
+		</section>
+	</main>
+	<script>
+		var msj       = document.getElementById('msj');
+		msj.innerHTML = "Mensaje desde JS \
+						 para el visitante. ";
+		//console.clear();
+		console.log("Hola mundo ADSI");
+	</script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Variables JS</title>
+	<link rel="stylesheet" href="css/master.css">
+</head>
+<body>
+	<main>
+		<header>
+			<h1>Variables JS</h1>
+		</header>
+		<section>
+			<ol>
+				<li class="number">23</li>
+				<li class="number">8</li>
+				<li class="number">25</li>
+				<li class="number">3</li>
+			</ol>
+			<h4 id="suma"></h4>
+			<ul>
+				<li>Hola </li>
+				<li>Mundo</li>
+			</ul>
+			<h4 id="msj"></h4>
+			<h4 id="comp"></h4>
+			<h4 id="arr"></h4>
+			<h4 id="obj"></h4>
+
+		</section>
+	</main>
+	<script>
+			var nums = document.getElementsByClassName('number');
+			var suma = document.getElementById('suma');
+			var msj  = document.getElementById('msj');
+			var res  = 0;
+			var str  = '';
+
+			// Tipo Númericos
+			for(var i = 0; i < nums.length; i++) {
+				res += parseInt(nums[i].textContent);
+			}
+			suma.innerHTML = "La suma es: "+res;
+			// Tipo Cadena
+			var strings = document.querySelectorAll('ul li');
+			for(var i = 0; i < strings.length; i++) {
+				str += strings[i].textContent;
+			}
+			msj.innerHTML = "La cadena resultado es: "+str;
+			// Tipo Booleano
+			var comp = document.getElementById('comp');
+			var bool = (4===7);
+			comp.innerHTML = "(4===7) => " + bool;
+			bool = (15>9)
+			comp.innerHTML += "<br>(15>9) => " + bool;
+			// Tipo Arreglo
+			var arr = document.getElementById('arr');
+			var dbll = new Array('Goku', 'Bulma', 'Hulon', 'Yamsha', 'Roshi');
+			dbll[5] = 'Krillin';
+			arr.innerHTML = "El arreglo: " + dbll;
+			// Tipo Objeto
+			var obj = document.getElementById('obj');
+			var goku = {
+				power: 99,
+				speed: 85,
+				attack: 70,
+				defense: 30
+			};
+			obj.innerHTML = "El poder de Goku es: " + goku.power;
+
+	</script>
+</body>
+</html>

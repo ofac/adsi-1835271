@@ -1,0 +1,68 @@
+
+main.base {
+	background: url(../imgs/car/base.png) no-repeat center;
+	height: 371px;
+	margin: 20px auto;
+	width: 300px;
+}
+
+
+main.base section.attributes ul {
+	list-style: none;
+	padding: 52px 0px 0px 110px;
+}
+main.base section.attributes ul li {
+	color: #12231d;
+	font: 14px Arial;
+	margin: 4px 0px 0px 0px;
+	height: 30px;
+}
+
+main.base section.methods button {
+	border: none;
+	cursor: pointer;
+	height: 57px;
+	margin: 44px 6px;
+	transition: all 0.5s;
+	width: 44px;
+}
+main.base section.methods button:hover {
+	transform: scale(1.2);
+}
+main.base section.methods button#btn-on {
+	background: url(../imgs/car/btn-on.png) no-repeat center;
+}
+main.base section.methods button#btn-off {
+	background: url(../imgs/car/btn-off.png) no-repeat center;
+}
+main.base section.methods button#btn-forw {
+	background: url(../imgs/car/btn-forw.png) no-repeat center;
+}
+main.base section.methods button#btn-back {
+	background: url(../imgs/car/btn-back.png) no-repeat center;
+}
+main.base section.methods button#btn-stop {
+	background: url(../imgs/car/btn-stop.png) no-repeat center;
+}
+
+main.base section.methods button#btn-on:hover,
+main.base section.methods button#btn-on.active {
+	background: url(../imgs/car/btnh-on.png) no-repeat center;
+}
+main.base section.methods button#btn-off:hover,
+main.base section.methods button#btn-off.active {
+	background: url(../imgs/car/btnh-off.png) no-repeat center;
+}
+main.base section.methods button#btn-forw:hover,
+main.base section.methods button#btn-forw.active {
+	background: url(../imgs/car/btnh-forw.png) no-repeat center;
+}
+main.base section.methods button#btn-back:hover,
+main.base section.methods button#btn-back.active {
+	background: url(../imgs/car/btnh-back.png) no-repeat center;
+}
+main.base section.methods button#btn-stop:hover,
+main.base section.methods button#btn-stop.active {
+	background: url(../imgs/car/btnh-stop.png) no-repeat center;
+}
+
