@@ -1,0 +1,254 @@
+section div.calc ul::selection {
+	background-color: transparent;
+}
+
+section div.calc {
+	background: url(../imgs/calc/base.png) no-repeat center;
+	height: 530px;
+	margin: 20px auto;
+	position: relative;
+	width: 320px;
+}
+
+section div.calc.dark {
+	background: url(../imgs/calc/base-dark.png) no-repeat center;
+}
+
+section div.calc button#theme {
+	background: transparent url(../imgs/calc/bt-theme.png) no-repeat center;
+	border: none;
+	cursor: pointer;
+	height: 20px;
+	position: absolute;
+	top: 46px; left: 14px;
+	width: 40px;
+}
+
+section div.calc.dark button#theme {
+	background: transparent url(../imgs/calc/bt-theme-dark.png) no-repeat center;
+}
+
+section div.calc output#displayMath {
+	color: #546f79;
+	text-align: right;
+	position: absolute;
+	top: 84px; right: 20px;
+}
+
+section div.calc output#displayAnswer {
+	color: #2e4a50;
+	font-size: 2em;
+	text-align: right;
+	position: absolute;
+	top: 120px; right: 20px;
+}
+
+section div.calc ul.buttons {
+	list-style: none;
+	padding: 0px;
+	position: absolute;
+	top: 170px; left: 12px;
+	width: 308px;
+}
+
+section div.calc ul.buttons li {
+	background: transparent no-repeat center;
+	cursor: pointer;
+	display: inline-block;
+	height: 50px;
+	margin: 0px 10px 4px 0px;
+	transition: all 0.5s;
+	width: 63px;
+}
+
+section div.calc ul.buttons li:hover {
+	transform: scale(1.1);
+}
+
+section div.calc ul.buttons li#bt-rq,
+section div.calc ul.buttons li#bt-pow,
+section div.calc.dark ul.buttons li#bt-rq,
+section div.calc.dark ul.buttons li#bt-pow {
+	cursor: not-allowed;
+	filter: opacity(0.4);
+}
+
+section div.calc ul.buttons li#bt-pl {
+	background: transparent url(../imgs/calc/bt-pl.png) no-repeat center;
+}
+
+section div.calc.dark ul.buttons li#bt-pl {
+	background: transparent url(../imgs/calc/bt-pl-dark.png) no-repeat center;
+}
+
+section div.calc ul.buttons li#bt-pr {
+	background: transparent url(../imgs/calc/bt-pr.png) no-repeat center;
+}
+
+section div.calc.dark ul.buttons li#bt-pr {
+	background: transparent url(../imgs/calc/bt-pr-dark.png) no-repeat center;
+}
+
+section div.calc ul.buttons li#bt-rq {
+	background: transparent url(../imgs/calc/bt-rq.png) no-repeat center;
+}
+
+section div.calc.dark ul.buttons li#bt-rq {
+	background: transparent url(../imgs/calc/bt-rq-dark.png) no-repeat center;
+}
+
+section div.calc ul.buttons li#bt-pow {
+	background: transparent url(../imgs/calc/bt-pow.png) no-repeat center;
+}
+
+section div.calc.dark ul.buttons li#bt-pow {
+	background: transparent url(../imgs/calc/bt-pow-dark.png) no-repeat center;
+}
+
+section div.calc ul.buttons li#bt-clear {
+	background: transparent url(../imgs/calc/bt-clear.png) no-repeat center;
+}
+
+section div.calc ul.buttons li#bt-del {
+	background: transparent url(../imgs/calc/bt-del.png) no-repeat center;
+}
+
+section div.calc ul.buttons li#bt-ans {
+	background: transparent url(../imgs/calc/bt-ans.png) no-repeat center;
+}
+
+section div.calc.dark ul.buttons li#bt-ans {
+	background: transparent url(../imgs/calc/bt-ans-dark.png) no-repeat center;
+}
+
+section div.calc ul.buttons li#bt-div {
+	background: transparent url(../imgs/calc/bt-div.png) no-repeat center;
+}
+
+section div.calc.dark ul.buttons li#bt-div {
+	background: transparent url(../imgs/calc/bt-div-dark.png) no-repeat center;
+}
+
+section div.calc ul.buttons li#bt-7 {
+	background: transparent url(../imgs/calc/bt-7.png) no-repeat center;
+}
+
+section div.calc.dark ul.buttons li#bt-7 {
+	background: transparent url(../imgs/calc/bt-7-dark.png) no-repeat center;
+}
+
+section div.calc ul.buttons li#bt-8 {
+	background: transparent url(../imgs/calc/bt-8.png) no-repeat center;
+}
+
+section div.calc.dark ul.buttons li#bt-8 {
+	background: transparent url(../imgs/calc/bt-8-dark.png) no-repeat center;
+}
+
+section div.calc ul.buttons li#bt-9 {
+	background: transparent url(../imgs/calc/bt-9.png) no-repeat center;
+}
+
+section div.calc.dark ul.buttons li#bt-9 {
+	background: transparent url(../imgs/calc/bt-9-dark.png) no-repeat center;
+}
+
+section div.calc ul.buttons li#bt-pro {
+	background: transparent url(../imgs/calc/bt-pro.png) no-repeat center;
+}
+
+section div.calc.dark ul.buttons li#bt-pro {
+	background: transparent url(../imgs/calc/bt-pro-dark.png) no-repeat center;
+}
+
+section div.calc ul.buttons li#bt-4 {
+	background: transparent url(../imgs/calc/bt-4.png) no-repeat center;
+}
+
+section div.calc.dark ul.buttons li#bt-4 {
+	background: transparent url(../imgs/calc/bt-4-dark.png) no-repeat center;
+}
+
+section div.calc ul.buttons li#bt-5 {
+	background: transparent url(../imgs/calc/bt-5.png) no-repeat center;
+}
+
+section div.calc.dark ul.buttons li#bt-5 {
+	background: transparent url(../imgs/calc/bt-5-dark.png) no-repeat center;
+}
+
+section div.calc ul.buttons li#bt-6 {
+	background: transparent url(../imgs/calc/bt-6.png) no-repeat center;
+}
+
+section div.calc.dark ul.buttons li#bt-6 {
+	background: transparent url(../imgs/calc/bt-6-dark.png) no-repeat center;
+}
+
+section div.calc ul.buttons li#bt-subs {
+	background: transparent url(../imgs/calc/bt-subs.png) no-repeat center;
+}
+
+section div.calc.dark ul.buttons li#bt-subs {
+	background: transparent url(../imgs/calc/bt-subs-dark.png) no-repeat center;
+}
+
+section div.calc ul.buttons li#bt-1 {
+	background: transparent url(../imgs/calc/bt-1.png) no-repeat center;
+}
+
+section div.calc.dark ul.buttons li#bt-1 {
+	background: transparent url(../imgs/calc/bt-1-dark.png) no-repeat center;
+}
+
+section div.calc ul.buttons li#bt-2 {
+	background: transparent url(../imgs/calc/bt-2.png) no-repeat center;
+}
+
+section div.calc.dark ul.buttons li#bt-2 {
+	background: transparent url(../imgs/calc/bt-2-dark.png) no-repeat center;
+}
+
+section div.calc ul.buttons li#bt-3 {
+	background: transparent url(../imgs/calc/bt-3.png) no-repeat center;
+}
+
+section div.calc.dark ul.buttons li#bt-3 {
+	background: transparent url(../imgs/calc/bt-3-dark.png) no-repeat center;
+}
+
+section div.calc ul.buttons li#bt-plus {
+	background: transparent url(../imgs/calc/bt-plus.png) no-repeat center;
+}
+
+section div.calc.dark ul.buttons li#bt-plus {
+	background: transparent url(../imgs/calc/bt-plus-dark.png) no-repeat center;
+}
+
+section div.calc ul.buttons li#bt-mod {
+	background: transparent url(../imgs/calc/bt-mod.png) no-repeat center;
+}
+
+section div.calc.dark ul.buttons li#bt-mod {
+	background: transparent url(../imgs/calc/bt-mod-dark.png) no-repeat center;
+}
+
+section div.calc ul.buttons li#bt-0 {
+	background: transparent url(../imgs/calc/bt-0.png) no-repeat center;
+}
+
+section div.calc.dark ul.buttons li#bt-0 {
+	background: transparent url(../imgs/calc/bt-0-dark.png) no-repeat center;
+}
+
+section div.calc ul.buttons li#bt-dot {
+	background: transparent url(../imgs/calc/bt-dot.png) no-repeat center;
+}
+
+section div.calc.dark ul.buttons li#bt-dot {
+	background: transparent url(../imgs/calc/bt-dot-dark.png) no-repeat center;
+}
+
+section div.calc ul.buttons li#bt-equal {
+	background: transparent url(../imgs/calc/bt-equal.png) no-repeat center;
+}

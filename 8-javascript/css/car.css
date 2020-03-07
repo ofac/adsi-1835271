@@ -66,3 +66,49 @@ main.base section.methods button#btn-stop.active {
 	background: url(../imgs/car/btnh-stop.png) no-repeat center;
 }
 
+main.base section#path {
+	height: 200px;
+	position: absolute;
+	left: 0px;
+	width: 300px;
+}
+
+main.base section#path div#vehicle {
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	height: 200px;
+	width: 300px;
+}
+/* =============================================== */
+/* Clase: on */
+main.base section#path div#vehicle.on {
+	animation: 0.4ms animOn infinite;
+}
+@keyframes animOn {
+	0%,100%   { transform: translateY(0px); }
+	50%       { transform: translateY(-2px); }
+}
+/* =============================================== */
+/* Clase: forward */
+main.base section#path.forward {
+	animation: 4s animForward linear infinite forwards;
+}
+@keyframes animForward {
+	0%   { transform: translateX(0px); }
+	100% { transform: translateX(1400px); }
+}
+
+/* =============================================== */
+/* Clase: backward */
+main.base section#path.backward {
+	animation-direction: reverse;
+}
+
+/* =============================================== */
+/* Clase: stop */
+main.base section#path.stop {
+	animation-play-state: paused;
+}
+

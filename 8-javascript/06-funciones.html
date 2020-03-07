@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Funciones JS</title>
+	<link rel="stylesheet" href="css/master.css">
+	<style>
+		input, button {
+			border-radius: 20px;
+			border: none;
+			display: block;
+			margin: 8px auto;
+			padding: 10px;
+			width: 250px;
+		}
+		button {
+			color: rgba(255,255,255,.8);
+			cursor: pointer;
+			background-color: rgba(0,0,0,.6);
+			width: 270px;
+		}
+		table, table td {
+			background-color: rgba(255,255,255,.2);
+			border: 1px solid rgba(0,0,0,.6);
+			border-collapse: collapse;
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<header>
+			<h1>Funciones JS</h1>
+		</header>
+		<section>
+			<input type="number" id="nf" min="1" max="24" placeholder="Filas">
+			<input type="number" id="nc" min="1" max="24" placeholder="Columnas">
+			<button id="btn"> Generar Tabla </button>
+			<hr>
+			<table id="tbl">
+				
+			</table>
+		</section>
+	</main>
+	<script>
+		// Vars
+		var btn = document.getElementById('btn');
+		var tbl = document.getElementById('tbl');
+
+		// Events
+		btn.onclick = function() {
+			var nf = document.getElementById('nf').value;
+			var nc = document.getElementById('nc').value;
+			if (nf.length > 0 && nc.length > 0) {
+				drawTable(Math.abs(nf), Math.abs(nc));
+			} else {
+				alert("All inputs are required!");
+			}
+		}
+		// Functions
+		function drawTable(nf, nc) {
+			if (nf < 21 && nc < 21 ) {
+				var ctbl = "";
+				for (var i=1; i <= nf; i++) {
+					ctbl += "<tr>";
+					for (var j=1; j <= nc; j++) {
+						ctbl += "<td>f"+i+"-c"+j+"</td>";
+					}
+					ctbl += "</tr>";
+				}
+				tbl.innerHTML = ctbl;
+			} else {
+				alert("La Cantidad de Filas/Columnas es muy grande!");
+			}
+		}
+	</script>
+</body>
+</html>
