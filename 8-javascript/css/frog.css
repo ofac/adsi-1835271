@@ -27,8 +27,8 @@ main.game section.screen-home {
 	width: 800px;
 }
 main.game section.screen-home button,
-main.game section.screen-credits button {
-	border: 1px solid red;
+main.game section.screen-credits button,
+main.game section.screen-gameover button {
 	border: none;
 	cursor: pointer;
 	height: 60px;
@@ -48,6 +48,10 @@ main.game section.screen-credits button#btn-back {
 	background: url(../imgs/frog/bt-back.png) no-repeat center;
 	bottom: 30px;
 }
+main.game section.screen-gameover button#btn-try {
+	background: url(../imgs/frog/bt-try.png) no-repeat center;
+	bottom: 30px;
+}
 /* Screen Play - - - - - - - - - - - - - - - - - - - */
 main.game section.screen-play {
 	background: url(../imgs/frog/road1.png) no-repeat center;
@@ -56,6 +60,9 @@ main.game section.screen-play {
 	overflow: hidden;
 	width: 800px;
 }
+main.game section.screen-play.river {
+	background: url(../imgs/frog/river2.png) no-repeat center;
+}
 main.game section.screen-play ul.hearts {
 	list-style: none;
 	padding: 0px;
@@ -63,6 +70,7 @@ main.game section.screen-play ul.hearts {
 	margin: 0px;
 	top: 8px; right: 4px;
 	width: 156px;
+	z-index: 3;
 }
 main.game section.screen-play ul.hearts li {
 	display: inline-block;
@@ -86,16 +94,16 @@ main.game section.screen-play div#frog {
 	height: 60px;
 	position: absolute;
 	left: 368px; top: 480px;
-	transition: all 0.1s ease-in;
 	width: 64px;
+	z-index: 1;
 }
 main.game section.screen-play div.car {
 	background-repeat: no-repeat;
 	background-position: center;
 	height: 58px;
 	position: absolute;
-	/*transition: all 0.5s linear;*/
 	width: 91px;
+	z-index: 2;
 }
 main.game section.screen-play div.car.car0 {
 	background-image: url(../imgs/frog/car1.png);
@@ -115,9 +123,40 @@ main.game section.screen-play div.car.car4 {
 main.game section.screen-play div.car.car5 {
 	background-image: url(../imgs/frog/car6.png);
 }
+/* River */
+main.game section.screen-play.river div.car {
+	height: 60px;
+	width: 125px;
+}
+main.game section.screen-play.river div.car.car0 {
+	background-image: url(../imgs/frog/croco1.png);
+}
+main.game section.screen-play.river div.car.car1 {
+	background-image: url(../imgs/frog/croco2.png);
+}
+main.game section.screen-play.river div.car.car2 {
+	background-image: url(../imgs/frog/croco3.png);
+}
+main.game section.screen-play.river div.car.car3 {
+	background-image: url(../imgs/frog/croco4.png);
+}
+main.game section.screen-play.river div.car.car4 {
+	background-image: url(../imgs/frog/croco5.png);
+}
+main.game section.screen-play.river div.car.car5 {
+	background-image: url(../imgs/frog/croco6.png);
+}
+
 /* Screen Credits - - - - - - - - - - - - - - - - - - - */
 main.game section.screen-credits {
 	background: url(../imgs/frog/bg-credits.png) no-repeat center;
+	height: 540px;
+	position: relative;
+	width: 800px;
+}
+/* Screen GameOver - - - - - - - - - - - - - - - - - - - */
+main.game section.screen-gameover {
+	background: url(../imgs/frog/bg-gameover.png) no-repeat center;
 	height: 540px;
 	position: relative;
 	width: 800px;

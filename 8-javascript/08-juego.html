@@ -16,12 +16,6 @@
 		</section>
 		<!-- Section Play -->
 		<section class="screen screen-play hide">
-			<div class="car"></div>
-			<div class="car"></div>
-			<div class="car"></div>
-			<div class="car"></div>
-			<div class="car"></div>
-			<div class="car"></div>
 			<div id="frog"></div>
 			<ul class="hearts">
 				<li class="heart active"></li>
@@ -33,6 +27,14 @@
 		<section class="screen screen-credits hide">
 			<button id="btn-back"></button>
 		</section>
+		<!-- Section GameOver -->
+		<section class="screen screen-gameover hide">
+			<button id="btn-try"></button>
+		</section>
+		<!-- Loop Sounds -->
+		<audio id="sound-menu" src="mp3/bgmenufrog.mp3" autoplay loop="999999"></audio>
+		<audio id="sound-play" src="mp3/bgplayfrog.mp3" loop="999999"></audio>
+		<audio id="sound-crash" src="mp3/crashfrog.mp3"></audio>
 	</main>
 	<script src="js/frog.js"></script>
 </body>

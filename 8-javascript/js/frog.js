@@ -1,49 +1,83 @@
-
+// Global Variables - - - - - - - - - - - - - - - - - - - - -
 var btnPlay    = document.getElementById('btn-play');
 var btnCredits = document.getElementById('btn-credits');
 var btnBack    = document.getElementById('btn-back');
+var btnTry     = document.getElementById('btn-try');
 var screens    = document.getElementsByClassName('screen');
 var frog       = document.getElementById('frog');
 var cars       = document.getElementsByClassName('car');
-
+var snMenu     = document.getElementById('sound-menu');
+var snPlay     = document.getElementById('sound-play');
+var snCrash    = document.getElementById('sound-crash');
+var lives      = document.querySelectorAll('ul li.heart.active');
+// Btns Events - - - - - - - - - - - - - - - - - - - - -
 btnPlay.onmouseover = function() {
-	this.classList.add('animated', 'heartBeat', 'infinite');
+	game.addBtnFx(this);
 }
 btnPlay.onmouseout = function() {
-	this.classList.remove('animated', 'heartBeat', 'infinite');
+	game.removeBtnFx(this);
 }
 btnPlay.onclick = function() {
 	game.screenTo(0, 1);
 	game.start();
 }
 btnCredits.onmouseover = function() {
-	this.classList.add('animated', 'heartBeat', 'infinite');
+	game.addBtnFx(this);
 }
 btnCredits.onmouseout = function() {
-	this.classList.remove('animated', 'heartBeat', 'infinite');
+	game.removeBtnFx(this);
 }
 btnCredits.onclick = function() {
 	game.screenTo(0, 2);
 }
 btnBack.onmouseover = function() {
-	this.classList.add('animated', 'heartBeat', 'infinite');
+	game.addBtnFx(this);
 }
 btnBack.onmouseout = function() {
-	this.classList.remove('animated', 'heartBeat', 'infinite');
+	game.removeBtnFx(this);
 }
 btnBack.onclick = function() {
 	game.screenTo(2, 0);
 }
-
+btnTry.onmouseover = function() {
+	game.addBtnFx(this);
+}
+btnTry.onmouseout = function() {
+	game.removeBtnFx(this);
+}
+btnTry.onclick = function() {
+	window.location.replace('08-juego.html');
+}
+// Object Game - - - - - - - - - - - - - - - - - - - - -
 var game = {
 	postLeft: 368,
 	postTop: 480,
 	start: function() {
+		this.activeSound();
 		this.moveFrog();
+		this.renderCars();
 		this.randomCars();
 	},
+	activeSound: function() {
+		snMenu.pause();
+		snMenu.currentTime = 0;
+		snPlay.play();
+	},
+	addBtnFx: function(btn) {
+		btn.classList.add('animated', 'heartBeat', 'infinite');
+	},
+	removeBtnFx: function(btn) {
+		btn.classList.remove('animated', 'heartBeat', 'infinite');
+	},
+	renderCars: function() {
+		for(var i=0; i<6; i++) {
+			let div = document.createElement('div');
+				div.setAttribute('class', 'car');
+			screens[1].appendChild(div);
+		}
+	},
 	moveFrog: function() {
-		document.onkeyup = function(event) {
+		document.onkeydown = function(event) {
 			//console.log(event.keyCode);
 			// Left - - - - - - - - - - - - - - - 
 			if(event.keyCode == 37) {
@@ -66,6 +100,9 @@ var game = {
 				if(game.postTop > 0) {
 					game.postTop -= 60; 
 					frog.style.top = game.postTop+'px';
+					if(game.postTop == 0) {
+						game.nextLevel();
+					}
 				}
 				game.jumpFrog();
 			}
@@ -83,14 +120,14 @@ var game = {
 		var lt  = -100; // left
 		var tp  = 480;  // top 
 		var rt  = 0;    // rotate
-		var tm  = 60;    // time
+		var tm  = 70;   // time
 		var dr  = 'r';  // direction
 		for (var i=0; i < cars.length; i++) {
 			let rndcar = Math.round(Math.random() * 5);
 			if(i == 3) {
 				lt = 810;
 				tp -= 60;
-				rt = 180
+				rt = 180;
 				dr = 'l';
 			}
 			tp -= 60;
@@ -103,30 +140,38 @@ var game = {
 		}
 	},
 	moveCars: function(car, tme, dir) {
-		let posl = -100;
-		let posr = 810;
+		let posL = -100;
+		let posR = 810;
 		setInterval(function() {
+			game.checkCollides(car, frog);
 			if(dir == 'r') {
-				if(posl < 810) {
-					posl += 10;
-					car.style.left = posl+'px';
+				if(posL < 810) {
+					posL += 10;
+					car.style.left = posL+'px';
 				} else {
-					posl = -100;
-				}	
+					posL = -100;
+					game.changeColorCar(car);
+				}
 			} else {
-				if(posr > -100) {
-					posr -= 10;
-					car.style.left = posr+'px';
+				if(posR > -100) {
+					posR -= 10;
+					car.style.left = posR+'px';
 				} else {
-					posr = 810;
+					posR = 810;
+					game.changeColorCar(car);
 				}
 			}
-		}, tme);
+		}, tme);	
+	},
+	changeColorCar: function(car) {
+		let rndcar = Math.round(Math.random() * 5);
+		car.classList.remove('car0', 'car1', 'car2', 'car3', 'car4', 'car5');
+		car.classList.add('car'+rndcar);
 	},
 	jumpFrog: function() {
-		frog.classList.add('animated', 'heartBeat');
+		frog.classList.add('animated', 'faster', 'heartBeat');
 		setTimeout(function() {
-			frog.classList.remove('animated', 'heartBeat');
+			frog.classList.remove('animated', 'faster', 'heartBeat');
 		}, 360);
 	},
 	screenTo: function(start, final) {
@@ -138,5 +183,65 @@ var game = {
 			screens[final].classList.remove('hide');
 			screens[final].classList.add('animated', 'bounceInUp');
 		}, 800);
+	},
+	resetFrog: function(frog) {
+		snCrash.play();
+		setTimeout(function(){
+    		snCrash.stop();
+    		snCrash.currentTime = 0;
+    	}, 500);
+		screens[1].classList.remove('bounceInUp');
+        screens[1].classList.add('shake');
+    	setTimeout(function(){
+    		screens[1].classList.remove('shake');
+    	}, 500);
+    	this.postLeft   = 368,
+		this.postTop    = 480,
+    	frog.style.left = this.postLeft+'px'; 
+    	frog.style.top  = this.postTop+'px';
+	},
+	checkLives: function() {
+		lives[lives.length-1].classList.remove('active');
+		lives = document.querySelectorAll('ul li.heart.active');
+		if(lives.length < 1) {
+			snPlay.pause();
+			snPlay.currentTime = 0;
+			snMenu.play();
+			game.screenTo(1, 3);
+		}
+	},
+	checkCollides: function(car, frog) {
+		cartop    = car.offsetTop;
+	    carleft   = car.offsetLeft;
+	    carright  = Number(car.offsetLeft) + Number(car.offsetWidth);
+	    carbottom = Number(car.offsetTop)  + Number(car.offsetHeight);
+
+	    frogtop    = frog.offsetTop;
+	    frogleft   = frog.offsetLeft;
+	    frogright  = Number(frog.offsetLeft) + Number(frog.offsetWidth);
+	    frogbottom = Number(frog.offsetTop)  + Number(frog.offsetHeight);
+
+	    if (carright  > frogleft   && 
+	        carleft   < frogright  && 
+	        cartop    < frogbottom && 
+	        carbottom > frogtop ) {
+	    		this.resetFrog(frog);
+	    		this.checkLives();
+	        }
+	},
+	nextLevel: function() {
+		cars[3].style.transform = 'rotateY(180deg)';
+		cars[4].style.transform = 'rotateY(180deg)';
+		cars[5].style.transform = 'rotateY(180deg)';
+		screens[1].classList.add('river');
+		screens[1].classList.remove('bounceInUp');
+        screens[1].classList.add('shake');
+    	setTimeout(function(){
+    		screens[1].classList.remove('shake');
+    	}, 500);
+		this.postLeft   = 368,
+		this.postTop    = 480,
+    	frog.style.left = this.postLeft+'px'; 
+    	frog.style.top  = this.postTop+'px';
 	}
 };
