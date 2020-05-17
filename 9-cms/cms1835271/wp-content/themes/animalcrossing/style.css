@@ -1,0 +1,303 @@
+/*
+Theme Name: Animal Crossing
+Theme URI: https://github.com/ofac/adsi-1835371/
+Author: Oscar Fernando Aristizábal
+Author URI: http://next2level.com/ofac
+Description: Thema referente a Animal Crossing
+Version: 2020.1
+License: GNU General Public License
+License URI: https://www.gnu.org/licenses/gpl.html
+Tags: one-column, two-columns, custom-menu, featured-images, microformats, sticky-post, threaded-comments, translation-ready
+Text Domain: animalcrossing
+*/
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}body{line-height:1}button{outline:0}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}q{display:inline;font-style:italic}q:before{content:'"';font-style:normal}q:after{content:'"';font-style:normal}textarea,input[type="text"],input[type="button"],input[type="submit"],input[type="reset"],input[type="search"],input[type="password"]{-webkit-appearance:none;appearance:none;border-radius:0}table{border-collapse:collapse;border-spacing:0}th,td{padding:2px}big{font-size:120%}small,sup,sub{font-size:80%}sup{vertical-align:super}sub{vertical-align:sub}dd{margin-left:20px}kbd,tt{font-family:courier;font-size:12px}ins{text-decoration:underline}del,strike,s{text-decoration:line-through}dt{font-weight:bold}address,cite,var{font-style:italic}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+.sticky{}.bypostauthor{}.wp-caption{}.wp-caption-text{}.gallery-caption{}.alignright{}.alignleft{}.aligncenter{}.screen-reader-text{clip:rect(1px, 1px, 1px, 1px);position:absolute !important}
+
+@font-face {
+  font-family: 'ZillaSlab-Bold';
+  src: url('fonts/ZillaSlab-Bold.eot?#iefix') format('embedded-opentype'),  url('fonts/ZillaSlab-Bold.woff') format('woff'), url('fonts/ZillaSlab-Bold.ttf')  format('truetype'), url('fonts/ZillaSlab-Bold.svg#ZillaSlab-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LibreFranklin-Regular';
+  src: url('fonts/LibreFranklin-Regular.eot?#iefix') format('embedded-opentype'),  url('fonts/LibreFranklin-Regular.woff') format('woff'), url('fonts/LibreFranklin-Regular.ttf')  format('truetype'), url('fonts/LibreFranklin-Regular.svg#LibreFranklin-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+	background: url(images/pattern-leaves.jpg) repeat fixed;
+	font-family: 'LibreFranklin-Regular';
+	padding: 0px;
+	margin: 0px;
+	*animation: 80s animBg linear infinite;
+}
+@keyframes animBg {
+	0%, 100% {
+		background-position: 0px 0px;
+	}
+	50% {
+		background-position: 500px 0px;
+	}
+}
+
+div.menu-burguer {
+	display: none;
+}
+
+div.menu-burguer button.leaf {
+	border: none;
+	background: transparent url(images/btn-burger.png) no-repeat center;
+	background-size: cover;
+	height: 60px;
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	transition: all 0.2s ease-in;
+	width: 60px;
+}
+
+div.menu-burguer button.leaf:hover {
+	cursor: pointer;
+	transform: scale(1.05);
+}
+
+div.menu-top-menu-container {
+	background: transparent url(images/top-menu.png) no-repeat center;
+	background-size: cover;
+	height: 123px;
+	margin: 0px auto;
+	position: fixed;
+	top: 0px;
+	left: 50%;
+    transform: translateX(-50%);
+	z-index: 999;
+	width: 100%;
+}
+
+ul#menu-top-menu {
+	list-style: none;
+	margin: 0px auto;
+	padding: 0px;
+	width: 744px;
+}
+
+div.menu-top-menu-container ul#menu-top-menu li.menu-item {
+	display: inline-block;
+	margin: 12px 0px 0px 0px;
+}
+
+div.menu-top-menu-container ul#menu-top-menu li.menu-item a {
+	background: transparent url(images/btn.png) no-repeat center;
+	height: 63px;
+	display: block;
+	color: #efe180;
+	font-family: 'ZillaSlab-Bold';
+	font-size: 18px;
+	line-height: 3.8rem;
+	text-align: center;
+	text-decoration: none;
+	transition: all 0.2s ease-in;
+	width: 183px;
+}
+
+div.menu-top-menu-container ul#menu-top-menu li.menu-item a:hover {
+	background: transparent url(images/btn-hover.png) no-repeat center;
+	color: #534741;
+}
+
+
+section.slider {
+	background: transparent url(images/top-slider.png) no-repeat 1px top;
+	height: 630px;
+	margin: 90px auto 0px auto;
+	padding-top: 20px;
+	position: relative;
+	width: 1368px;
+}
+
+section.slider div.logo {
+	background: transparent url(images/logo.png) no-repeat center;
+	height: 404px;
+	margin: 0px auto;
+	width: 604px;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Main */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+main#content {
+	margin: 40px auto;
+	width: 1366px;
+}
+body.page main#content {
+	margin: 160px auto 40px auto;
+}
+main#content h1,
+main#content h2 {
+	color: #695c46;
+	font-family: 'ZillaSlab-Bold';
+	font-size: 3.8rem;
+	margin: 10px 0px;
+}
+main#content h2 a {
+	text-decoration: none;
+	color: #695c46;
+}
+main#content article {
+	height: 651px;
+	margin: 40px auto;
+	position: relative;
+	width: 1054px;
+}
+main#content article h1,
+main#content article h2 { 
+	position: relative;
+	top: 30px;
+	left: 60px;
+}
+main#content article.not-found {
+	margin-top: 160px;
+	background: transparent url(images/sect00.png) no-repeat center;
+}
+main#content article.post-40 {
+	background: transparent url(images/sect01.png) no-repeat center;
+}
+main#content article.post-40 h2 {
+	color: #534741;
+	opacity: 0.7;
+}
+main#content article.post-40 p {
+	color: #534741;
+	left: 48px;
+	width: 400px;
+}
+main#content article.post-38,
+main#content article.post-11  {
+	background: transparent url(images/sect02.png) no-repeat center;
+}
+main#content article.post-38 h2,
+main#content article.post-11 h1 {
+	color: #3a6890;
+	opacity: 0.7;
+}
+main#content article.post-38 p,
+main#content article.post-11 p {
+	color: #3a6890;
+	right: 48px;
+	width: 300px;
+}
+main#content article.post-35,
+main#content article.post-14 {
+	background: transparent url(images/sect03.png) no-repeat center;
+}
+main#content article.post-35 h2,
+main#content article.post-14 h1 {
+	color: #347b75;
+	opacity: 0.7;
+}
+main#content article.post-35 p,
+main#content article.post-14 p {
+	color: #347b75;
+	left: 48px;
+	width: 300px;
+}
+main#content article.post-8,
+main#content article.category-share {
+	background: transparent url(images/sect04.png) no-repeat center;
+}
+main#content article.post-8 h2,
+main#content article.category-share h2 {
+	color: #443e79;
+	opacity: 0.7;
+}
+main#content  article.post-8 p,
+main#content article.category-share p {
+	color: #443e79;
+	right: 48px;
+	width: 300px;
+}
+main#content article .entry-content p {
+	line-height: 1.6rem;
+	position: absolute;
+	padding: 10px;
+	top: 40%;
+    transform: translateY(-40%);
+	margin: 10px;
+}
+
+main#content article .entry-content a {
+	color: #fff;
+	font-family: 'ZillaSlab-Bold';
+	font-size: 24px;
+	display: block;
+	line-height: 6.4rem;
+	height: 119px;
+	position: absolute;
+	bottom: 90px;
+	transition: all 0.2s ease-in;
+	text-align: center;
+	text-decoration: none;
+	width: 307px;
+}
+main#content article.post-38 .entry-content a.btn {
+	background: transparent url(images/btn-s01.png) no-repeat center;
+	right: 80px;
+}
+main#content article.post-38 .entry-content a.btn:hover {
+	color: #3a6890;
+	background: transparent url(images/btn-s01-hover.png) no-repeat center;
+}
+
+main#content article.post-35 .entry-content a.btn {
+	background: transparent url(images/btn-s02.png) no-repeat center;
+	left: 80px;
+}
+main#content article.post-35 .entry-content a.btn:hover {
+	color: #347b75;
+	background: transparent url(images/btn-s02-hover.png) no-repeat center;
+}
+
+main#content article.post-8 .entry-content a.btn {
+	background: transparent url(images/btn-s03.png) no-repeat center;
+	right: 80px;
+}
+main#content article.post-8 .entry-content a.btn:hover {
+	color: #443e79;
+	background: transparent url(images/btn-s03-hover.png) no-repeat center;
+}
+
+main#content article .entry-content a.btn:hover {
+	transform-origin: 50% 0;
+    animation: swinging 1.5s ease-in-out forwards infinite;
+}
+
+@keyframes swinging{
+    0%  { transform: rotate(10deg) ;}
+    50% { transform: rotate(-5deg); }
+    100%{ transform: rotate(10deg);}
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Footer */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+footer#footer {
+	background: transparent url(images/footer.png) no-repeat center;
+	background-size: cover;
+	height: 336px; /*319px*/
+	margin: 40px auto;
+	position: absolute;
+	left: 50%;
+    transform: translateX(-50%);
+	width: 100%;
+}
+footer#footer #copyright {
+	color: #fff;
+	position: relative;
+	text-align: center;
+	top: 140px;
+	left: 50%;
+    transform: translateX(-50%);
+	width: 340px;
+}
