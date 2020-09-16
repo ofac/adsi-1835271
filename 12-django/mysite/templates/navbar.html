@@ -1,0 +1,48 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-info">
+  <a class="navbar-brand" href="/">
+    <img src="{% static 'imgs/logo.png' %}" width="100px">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+    <ul class="navbar-nav">
+    <li class="nav-item">
+        <a class="nav-link" href="/movies"> <i class="fa fa-list"></i> Movie List <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-md-auto mr-5">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-clipboard-list" ></i> Categories
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="{% url 'movies:movie_category' 'A' %}">Action</a>
+          <a class="dropdown-item" href="{% url 'movies:movie_category' 'D' %}">Drama</a>
+          <a class="dropdown-item" href="{% url 'movies:movie_category' 'C' %}">Comedy</a>
+          <a class="dropdown-item" href="{% url 'movies:movie_category' 'R' %}">Romance</a>
+          <a class="dropdown-item" href="{% url 'movies:movie_category' 'F' %}">Fiction</a>
+        </div>
+      </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-globe" ></i> Languages
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="{% url 'movies:movie_language' 'EN' %}">English</a>
+          <a class="dropdown-item" href="{% url 'movies:movie_language' 'ES' %}">Spanish</a>
+          <a class="dropdown-item" href="{% url 'movies:movie_language' 'GR' %}">German</a>
+        </div>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0" method="GET" action="{% url 'movies:movie_search' %}">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" name="q" value='{{ request.GET.q }}'>
+      <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
+        <i class="fa fa-search"></i>
+      </button>
+    </form>
+  </div>
+</nav>

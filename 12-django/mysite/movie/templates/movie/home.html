@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} [ Movie App  ] {% endblock%}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+
+        <img src="{% static 'imgs/banner.png' %}" class="img-fluid mt-5" alt="">
+        <br><br>
+        <h3 class="text-info h4">Recently Added</h3>
+        <hr>
+        <div class="owl-carousel owl-theme">
+            {% for movie in recently_added %}
+                <div class="card mb-5">
+                    <img src="{{ movie.image.url }}" class="card-img-top" alt="{{ movie.title }}">
+                </div>
+            {% endfor %}
+        </div>
+        
+        <h3 class="text-info h4">Most Watched</h3>
+        <hr>
+        <div class="owl-carousel owl-theme">
+        {% for movie in most_watched %}
+            <div class="card mb-5">
+                    <img src="{{ movie.image.url }}" class="card-img-top" alt="{{ movie.title }}">
+                </div>
+        {% endfor %}
+        </div>
+        <h3 class="text-info h4">Top Rated</h3>
+        <hr>
+        <div class="owl-carousel owl-theme">
+        {% for movie in top_rated %}
+            <div class="card mb-5">
+                    <img src="{{ movie.image.url }}" class="card-img-top" alt="{{ movie.title }}">
+                </div>
+        {% endfor %}
+        </div>
+        
+
+    </div>
+</div>
+{% endblock content%}

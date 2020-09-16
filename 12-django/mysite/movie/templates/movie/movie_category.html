@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block title %} [ Movie List ] {% endblock%}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <h1 class="text-center text-light mt-5 h3"> 
+        [ <i class="fa fa-clipboard-list" ></i>
+            {% if movie_category == 'A' %}
+                Action
+            {% elif movie_category == 'D' %}
+                Drama
+            {% elif movie_category == 'C' %}
+                Comedy
+            {% elif movie_category == 'R' %}
+                Romance
+            {% elif movie_category == 'F' %}
+                Fiction
+            {% endif %}
+        Movies ] </h1>
+        <hr><br>
+
+        <div class="row mb-5">
+            {% for movie in object_list %}
+            <div class="col-sm-6">
+
+                <div class="card mb-5" style="width: 18rem;">
+                    <img src="{{ movie.image.url }}" class="card-img-top" alt="{{ movie.title }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ movie.title }}</h5>
+                        <hr>
+                        <p class="card-text"><small class="text-muted">{{ movie.year }}</small></p>
+                        <a href="/movies/{{ movie.id }}" class="btn btn-info btn-block">
+                            <i class="fa fa-film" ></i> 
+                            Movie Detail 
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <div class="col-sm-12">
+                <div class="alert alert-info alert-block">
+                    <h4 class="alert-heading">Ops!</h4>
+                    There are no Movies in this Category
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        {% if  is_paginated %}
+            <ul class="pagination justify-content-center">
+                {% if page_obj.has_previous %}
+                    <li class="page-item">
+                    <a class="page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                    </li>
+                {% endif %}
+
+                {% for pages in page_obj.paginator.page_range %}
+                    {% if  page_obj.number == pages %}
+                        <li class="page-item active"><a class="page-link" href="#">{{ pages }}</a></li>
+                    {% else %}
+                        <li class="page-item"><a class="page-link" href="?page={{pages}}">{{ pages }}</a></li>
+                    {% endif %}
+                {% endfor %}
+
+                {% if page_obj.has_next %}
+                    <li class="page-item">
+                    <a class="page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                    </li>
+                {% endif %}
+            </ul>
+        {% endif %}
+    </div>
+</div>
+{% endblock content%}

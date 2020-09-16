@@ -1,0 +1,17 @@
+01- virtualenv -p /Library/Frameworks/Python.framework/Versions/3.7/bin/python3 venv
+02- source venv/bin/activate
+03- pip install Django==3.1
+04- pip list
+05- django-admin startproject mysite
+06- cd mysite
+07- python manage.py startapp movie
+08- python manage.py runserver
+09- python manage.py migrate
+10- python manage.py createsuperuser
+11- python manage.py makemigrations
+12- python manage.py migrate
+
+
+00- pip install mysqlclient
+00- pip install Pillow
+
